@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import axios from "axios";
 axios.defaults.baseURL = "https://message-137c6.firebaseio.com/";
-
+//the best thing to do is to comment 😂
 const MessaginArea = (props) => {
   const [message, setMessage] = useState("");
   const sendMessage = () => {
