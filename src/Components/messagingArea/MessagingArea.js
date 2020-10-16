@@ -3,7 +3,7 @@ import "./index.css";
 import axios from "axios";
 axios.defaults.baseURL = "https://message-137c6.firebaseio.com/";
 
-const Content = (props) => {
+const MessaginArea = (props) => {
   const [message, setMessage] = useState("");
   const sendMessage = () => {
     const messages = document.querySelector(".messages");
@@ -58,12 +58,12 @@ const Content = (props) => {
           ))}
         </ul>
       </div>
-      <div className="writing_messages_area">
+      <section className="writing_messages_area">
         <input typename="text" onChange={(e) => setMessage(e.target.value)} />
         <span onClick={sendMessage}>Send</span>
-      </div>
+      </section>
     </form>
   );
 };
 
-export default Content;
+export default MessaginArea;
