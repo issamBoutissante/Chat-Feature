@@ -1,0 +1,27 @@
+.layout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layout main {
+  width: 50%;
+  max-width: 750px;
+  height: 80%;
+  padding: 8%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(9, 113, 231, 0.931);
+  border-radius: 8px;
+}
+
+@media (min-width: 850px) {
+  .layout main {
+    margin: 0% 35%;
+    padding: 4%;
+  }
+}

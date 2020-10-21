@@ -1,8 +1,8 @@
 import React from "react";
-import Content from "./Components/messagingArea/MessagingArea";
+import LogInPage from "../src/Components/LogInPage/LogInPage";
 
 function App() {
-  return <Content />;
+  return <LogInPage />;
 }
 
 export default App;

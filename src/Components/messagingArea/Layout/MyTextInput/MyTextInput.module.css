@@ -1,0 +1,18 @@
+.myText {
+  width: 100%;
+  height: 10%;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  text-align: center;
+  font-size: large;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.856);
+  border-radius: 5px;
+  color: rgba(9, 113, 231, 0.931);
+  border: 1px solid rgba(9, 113, 231, 0.931);
+  background-color: white;
+  box-shadow: 1px 1px 4px 1px rgba(9, 113, 231, 0.931);
+}
+.myText:focus {
+  outline: none;
+}

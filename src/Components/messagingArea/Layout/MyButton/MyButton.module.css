@@ -1,0 +1,18 @@
+.myButton {
+  height: 45px;
+  width: 100%;
+  margin: 5%;
+  color: white;
+  border-color: white;
+  background-color: rgba(9, 113, 231, 0.931);
+  border-radius: 5px;
+  font-size: large;
+}
+.myButton:hover {
+  border: 1px solid rgba(9, 113, 231, 0.931);
+  background-color: white;
+  color: rgba(9, 113, 231, 0.931);
+}
+.myButton:focus {
+  outline: none;
+}
