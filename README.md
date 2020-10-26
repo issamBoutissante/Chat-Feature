@@ -1,2 +1,1 @@
-hi dude what do you thing about this game 
-yeah i know its not responsive 
+masterthis is a node js app so you cant check it here sorry
