@@ -1,12 +1,15 @@
 import axios from "axios";
+import React from "react";
+import { Link, Redirect } from "react-router-dom";
 axios.defaults.baseURL = "https://message-137c6.firebaseio.com/";
 
 const loginFunctions = {
   signIn: function (name) {
+    let restult = false;
     loginFunctions.isAccountExist(name).then((value) => {
-      value
-        ? alert("this account exist ")
-        : alert("this account doesnt exist...create an account...");
+      if (value) {
+        return true;
+      } else alert("this account doesnt exist...create an account...");
     });
   },
   signUp: function (name) {
