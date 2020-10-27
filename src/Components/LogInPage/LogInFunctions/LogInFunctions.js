@@ -5,16 +5,12 @@ axios.defaults.baseURL = "https://message-137c6.firebaseio.com/";
 
 const loginFunctions = {
   signIn: function (name) {
-    let restult = false;
-    loginFunctions
-      .isAccountExist(name)
-      .then((value) => {
-        if (value) {
-          return true;
-        }
-        return false;
-      })
-      .then((res) => alert(restult));
+    return loginFunctions.isAccountExist(name).then((value) => {
+      if (value) {
+        return true;
+      }
+      return false;
+    });
   },
   signUp: function (name) {
     if (name.length <= 3) {

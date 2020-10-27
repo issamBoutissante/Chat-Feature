@@ -18,11 +18,9 @@ export default class LogInPage extends Component {
     });
   };
   onSingInHandler = () => {
-    let result = func.signIn(this.state.name);
-    alert(result);
-    if (result == true) {
-      this.setState({ isAuthenticated: true });
-    }
+    func.signIn(this.state.name).then((isExist) => {
+      if (isExist) this.setState({ isAuthenticated: true });
+    });
   };
   onChangeTextHandler = (e) => {
     this.setState({ name: e.target.value });
@@ -34,8 +32,13 @@ export default class LogInPage extends Component {
         <MyInput value={this.state.name} onChange={this.onChangeTextHandler} />
         <MyButton onClick={this.onSingInHandler}>
           sign in
-          {this.state.isAuthenticated ? <Redirect to={"/home"} /> : null}
+          {this.state.isAuthenticated ? (
+            <Redirect
+              to={{ pathname: "/home", state: { name: this.state.name } }}
+            />
+          ) : null}
         </MyButton>
+
         <MyButton onClick={this.onSignUpHandler}>sign up</MyButton>
         {this.state.showSignUp ? (
           <>
