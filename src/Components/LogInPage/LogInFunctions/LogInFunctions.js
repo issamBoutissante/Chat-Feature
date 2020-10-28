@@ -6,10 +6,10 @@ axios.defaults.baseURL = "https://message-137c6.firebaseio.com/";
 const loginFunctions = {
   signIn: function (name) {
     return loginFunctions.isAccountExist(name).then((value) => {
-      if (value) {
-        return true;
+      if (value.isExist) {
+        return value;
       }
-      return false;
+      return value;
     });
   },
   signUp: function (name) {
@@ -39,10 +39,10 @@ const loginFunctions = {
     let isExist = axios.get("./accounts.json").then((res) => {
       for (const key in res.data) {
         if (name == res.data[key].name) {
-          return true;
+          return { isExist: true, Account: key };
         }
       }
-      return false;
+      return { isExist: false };
     });
     return isExist;
   },
