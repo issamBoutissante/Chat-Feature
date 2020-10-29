@@ -10,6 +10,7 @@ export default function HomeContent(props) {
         <div className={classes.friendsArea}>
           <div className={classes.text}>Friends</div>
           <input type="text" className={classes.text} />
+    <ul><!--here i will add all the friends that the person will have --></ul>
         </div>
         <div className={classes.messagingArea}></div>
       </section>
