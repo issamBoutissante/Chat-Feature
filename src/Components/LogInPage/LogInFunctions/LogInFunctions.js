@@ -1,12 +1,15 @@
 import axios from "axios";
+import React from "react";
+import { Link, Redirect } from "react-router-dom";
 axios.defaults.baseURL = "https://message-137c6.firebaseio.com/";
 
 const loginFunctions = {
   signIn: function (name) {
-    loginFunctions.isAccountExist(name).then((value) => {
-      value
-        ? alert("this account exist ")
-        : alert("this account doesnt exist...create an account...");
+    return loginFunctions.isAccountExist(name).then((value) => {
+      if (value.isExist) {
+        return value;
+      }
+      return value;
     });
   },
   signUp: function (name) {
@@ -36,10 +39,10 @@ const loginFunctions = {
     let isExist = axios.get("./accounts.json").then((res) => {
       for (const key in res.data) {
         if (name == res.data[key].name) {
-          return true;
+          return { isExist: true, Account: key };
         }
       }
-      return false;
+      return { isExist: false };
     });
     return isExist;
   },
