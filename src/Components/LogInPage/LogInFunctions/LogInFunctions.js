@@ -39,7 +39,7 @@ const loginFunctions = {
     let isExist = axios.get("./accounts.json").then((res) => {
       for (const key in res.data) {
         if (name == res.data[key].name) {
-          return { isExist: true, Account: key };
+          return { isExist: true, AccountID: key };
         }
       }
       return { isExist: false };

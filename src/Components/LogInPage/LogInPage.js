@@ -10,7 +10,7 @@ export default class LogInPage extends Component {
     name: "",
     showSignUp: false,
     isAuthenticated: false,
-    Account: null,
+    AccountID: null,
   };
 
   onSignUpHandler = () => {
@@ -21,7 +21,7 @@ export default class LogInPage extends Component {
   onSingInHandler = () => {
     func.signIn(this.state.name).then((res) => {
       if (res.isExist) {
-        this.setState({ Account: res.Account, isAuthenticated: true });
+        this.setState({ AccountID: res.AccountID, isAuthenticated: true });
       }
     });
   };
@@ -37,7 +37,10 @@ export default class LogInPage extends Component {
           sign in
           {this.state.isAuthenticated ? (
             <Redirect
-              to={{ pathname: "/home", state: { Account: this.state.Account } }}
+              to={{
+                pathname: "/home",
+                state: { AccountID: this.state.AccountID },
+              }}
             />
           ) : null}
         </MyButton>
