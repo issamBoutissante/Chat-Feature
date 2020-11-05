@@ -9,6 +9,7 @@ const loginFunctions = {
       if (value.isExist) {
         return value;
       }
+      alert("this account doesnt exist");
       return value;
     });
   },
@@ -21,7 +22,7 @@ const loginFunctions = {
   },
   addAccount: function (name) {
     loginFunctions.isAccountExist(name).then((res) => {
-      if (res) {
+      if (res.isExist) {
         alert("this name is already used choose another one");
         return;
       }
