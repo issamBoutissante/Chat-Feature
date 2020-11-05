@@ -1,0 +1,36 @@
+.HomeContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.HomeContent * {
+  border: 1px solid rgba(9, 113, 231, 0.931);
+}
+.header {
+  flex-grow: 1;
+}
+.main {
+  flex-grow: 4;
+  display: flex;
+  flex-direction: row;
+}
+.friendsArea {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.messagingArea {
+  width: 50%;
+}
+.text {
+  margin-top: 3px;
+  width: 95%;
+  height: 30px;
+}
+.text:focus {
+  outline: none;
+}
