@@ -2,24 +2,21 @@ import React from "react";
 import classes from "./HomeContent.module.css";
 import Functions from "../../LogInPage/LogInFunctions/LogInFunctions";
 
-
-
 export default class HomeContent extends React.Component {
-  state={
-    friends={}
-  }
-  onSearchHandler=(name) => {
-  Functions.isAccountExist(name).then((value) => {
-    if (value.isExist) {
-      
-    }
-  });
-};
+  state = {
+    friends: {},
+  };
+  onSearchHandler = (name) => {
+    Functions.isAccountExist(name).then((value) => {
+      if (value.isExist) {
+      }
+    });
+  };
   render() {
     return (
       <secion className={classes.HomeContent}>
         <header className={classes.header}>
-          <h1>{props.accountInfo.name}</h1>
+          <h1>{this.props.accountInfo.name}</h1>
         </header>
         <section className={classes.main}>
           <div className={classes.friendsArea}>
